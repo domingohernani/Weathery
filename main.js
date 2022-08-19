@@ -95,7 +95,6 @@ getUserLocation()
     .then((position) => {
         sessionStorage.setItem('latitude', position.coords.latitude);
         sessionStorage.setItem('longitude', position.coords.longitude);
-        sessionStorage.setItem('is_location_detected', true);
 
         // Calling the function for fetch from a API
         fetchAPI(sessionStorage.getItem('latitude'), sessionStorage.getItem('longitude'));
