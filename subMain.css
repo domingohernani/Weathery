@@ -1,0 +1,73 @@
+.subMain {
+    position: relative;
+    float: right;
+    top: 0;
+    width: 70%;
+    background-image: linear-gradient(to left bottom, #0d3878, #234784, #355790, #47689c, #5878a8);
+}
+h3 {
+    margin: 2rem 2.5rem;
+}
+.main_weather {
+    margin-top: 2.3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+    
+    .atmosphericPressure, .humidity, .visibility {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+
+        width: 30%;
+        height: 170px;
+        padding: 1rem 2.5rem;
+        background-color: rgb(133, 167, 229);
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        border-radius: 10px;
+    }
+    .wind_details {
+        width: 93%;
+        margin: 2rem auto;
+        background-color: red;
+        padding: 2.5rem 2.5rem 4rem;
+        border-radius: 10px;
+        background-color: rgb(133, 167, 229);
+
+
+        display: grid;
+        gap: 1.3rem 2rem;
+        grid-template-columns: auto auto auto;
+    }
+        .windHeader {
+            display: flex;
+            place-items: center;
+            grid-column: 1/4;
+            margin: auto;
+        }
+/* Responsiveness */
+@media (max-width: 920px) {
+    .main_weather {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+    .main_weather > div,  .wind_details{
+        width: 80%;
+        min-width: 300px;
+    }
+    body {
+        overflow: scroll;
+    }
+
+    .wind_details{
+        display: flex;
+        flex-direction: column;
+    }
+    .main {
+        height: 1100px;
+        background-color: rgb(133, 167, 229);
+    }
+}
