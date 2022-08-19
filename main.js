@@ -91,8 +91,7 @@ const getUserLocation = () => {
         }
     })
 }
-// if (!sessionStorage.getItem('is_location_detected')) {
-    getUserLocation()
+getUserLocation()
     .then((position) => {
         sessionStorage.setItem('latitude', position.coords.latitude);
         sessionStorage.setItem('longitude', position.coords.longitude);
@@ -104,4 +103,3 @@ const getUserLocation = () => {
     .catch((err) => { 
         console.log(err.message);
     })
-// }
